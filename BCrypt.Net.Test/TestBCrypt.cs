@@ -161,6 +161,7 @@ namespace BCrypt.Net.Test
             string salt = BCrypt.GenerateSalt();
             string expected = BCrypt.HashPassword(plain, salt);
 
+
             var b = BCrypt.Verify(plain, s);
 
             Assert.IsTrue(BCrypt.Verify(plain, expected));
